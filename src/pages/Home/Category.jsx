@@ -7,7 +7,7 @@ const Category = () => {
     const [categories,setCategories]=useState([])
     const [active, setActive]= useState('Marvel')
     useEffect(()=>{
-      fetch(`https://toy-server-pi.vercel.app/toys/${active}`)
+      fetch(`https://toy-server-smoky.vercel.app/toys/${active}`)
       .then(res=>res.json())
       .then(data=>setCategories(data))
     },[active]);
